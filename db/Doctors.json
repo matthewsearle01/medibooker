@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "61b7245479dcb0ea240ee1f0"
+  },
+  "name": "Dr Octavius",
+  "email": "doctoroctopus@medibooker.com",
+  "password": "ihatespiderman"
+},{
+  "_id": {
+    "$oid": "61b725c779dcb0ea240ee1f1"
+  },
+  "name": "Dr Ramoray",
+  "email": "doctorramoray@medibooker.com",
+  "password": "howyoudoing?"
+},{
+  "_id": {
+    "$oid": "61b726a079dcb0ea240ee1f2"
+  },
+  "name": "Dr Nick",
+  "email": "doctornick@medibooker.com",
+  "password": "hieverybody"
+},{
+  "_id": {
+    "$oid": "61b7271c79dcb0ea240ee1f3"
+  },
+  "name": "Dr Doom",
+  "email": "doctordoom@medibooker.com",
+  "password": "IAMDOOM"
+},{
+  "_id": {
+    "$oid": "61b727b779dcb0ea240ee1f4"
+  },
+  "name": "Dr Dre",
+  "email": "doctordre@medibooker.com",
+  "password": "straightouttacompton"
+}]
