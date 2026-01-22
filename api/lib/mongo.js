@@ -5,6 +5,9 @@ let clientPromise;
 async function getDb(name = 'medibookerdb') {
   const uri = process.env.MONGODB_URI;
   
+  console.log('MONGODB_URI exists:', !!uri);
+  console.log('MONGODB_URI length:', uri ? uri.length : 0);
+  
   if (!uri) {
     throw new Error('MONGODB_URI environment variable is not set');
   }

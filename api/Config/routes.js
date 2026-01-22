@@ -12,5 +12,5 @@ module.exports = function routes(app) {
   r.get('/appointments', AppointmentController.getAppointments.bind(AppointmentController));
   r.post('/appointments', AppointmentController.addAppointment.bind(AppointmentController));
 
-  app.use('/api', r); // optional '/api' prefix
+  app.use(r); // routes mounted at root - Vercel rewrite handles /api prefix
 };
