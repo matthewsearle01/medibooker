@@ -1,35 +1,25 @@
 {
-  "name": "2021-aug-medibooker-be",
+  "name": "medibooker",
   "version": "1.0.0",
-  "description": "Medibooker Backend App",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
-  },
+  "private": true,
   "engines": {
-    "node": "18.0.0"
+    "node": "20.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iO-Academy/2021-aug-medibooker-be.git"
+  "scripts": {
+    "dev": "node api/local.js",
+    "build": "cd client && npm install && npm run build",
+    "start": "node api/local.js"
   },
-  "author": "Belinda, Matt, and Tom",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iO-Academy/2021-aug-medibooker-be/issues"
-  },
-  "homepage": "https://github.com/iO-Academy/2021-aug-medibooker-be#readme",
   "dependencies": {
-    "body-parser": "^1.19.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
-    "express": "^4.17.1",
-    "mongodb": "^4.2.1"
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^9.1.3",
-    "nock": "^13.2.1"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
   }
 }

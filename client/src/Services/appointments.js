@@ -1,5 +1,5 @@
 export async function getAvailableAppointments(doctor, date) {
-  const response = await fetch('http://localhost:3001/appointments');
+  const response = await fetch('/api/appointments');
   const appointments = await response.json();
   let selectedAppointments = [];
   appointments.map((appointment) => {

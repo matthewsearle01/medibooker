@@ -1,4 +1,4 @@
 export function getDoctors() {
-  return fetch('http://localhost:3001/doctors')
+  return fetch('/api/doctors')
     .then(data => data.json())
 }

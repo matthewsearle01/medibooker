@@ -5,7 +5,7 @@ import PatientDetails from '../Components/Pages/PatientDetails';
 import BookingConfirmed from '../Components/Pages/BookingConfirmed';
 import DoctorLogin from '../Components/Pages/DoctorLogin';
 import DoctorPortal from '../Components/Pages/DoctorPortal';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Routing = () => {
   const [input, setInput] = useState({});
