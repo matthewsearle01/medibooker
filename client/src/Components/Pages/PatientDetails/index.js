@@ -54,7 +54,7 @@ const PatientDetails = (props) => {
   };
 
   return (
-    <section className='bg-blue-100 flex flex-col justify-between h-full'>
+    <section className='bg-blue-100 flex flex-col justify-between min-h-screen'>
       <Navbar heading='Patient details' link={handleHomeButton} content='Cancel booking' buttonClass='ml-auto px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500'/>
         <section className='p-6 mx-6 md:mx-auto bg-white rounded-md shadow-md my-4'>
           <h1 className='text-blue-900 text-2xl'>
