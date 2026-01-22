@@ -11,9 +11,9 @@ module.exports = {
       },
       fontFamily: { TenorSans:['Tenor Sans','sans-serif'], Rubik:['Rubik','sans-serif'] },
       backgroundImage: {
-        booking:"url('/images/booking.jpg')",
-        doctor:"url('/images/doctor.jpg')",
-        diary:"url('/images/diary.jpg')"
+        booking:"url('../public/images/booking.jpg')",
+        doctor:"url('../public/images/doctor.jpg')",
+        diary:"url('../public/images/diary.jpg')"
       }
     }
   },
