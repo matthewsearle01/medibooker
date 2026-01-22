@@ -1,18 +1,21 @@
 const serverless = require('serverless-http');
 const app = require('./server');
 
+// Store the original URL before serverless-http processes it
+let originalRequestUrl = '/';
+
 const handler = serverless(app, {
   request: (request, event, context) => {
-    // Vercel rewrites strip the path - restore it from the original URL
-    // The original URL comes in event.path or we can parse from headers
-    const originalUrl = event.path || request.url;
-    console.log('serverless-http request transform, setting url to:', originalUrl);
-    request.url = originalUrl;
-    request.originalUrl = originalUrl;
+    // Use the URL we captured before serverless-http
+    console.log('serverless-http request transform, setting url to:', originalRequestUrl);
+    request.url = originalRequestUrl;
+    request.originalUrl = originalRequestUrl;
   }
 });
 
 module.exports = async (req, res) => {
-  console.log('Vercel request URL:', req.url);
+  // Capture the original URL from Vercel's request
+  originalRequestUrl = req.url;
+  console.log('Vercel request URL (captured):', originalRequestUrl);
   return handler(req, res);
 };
