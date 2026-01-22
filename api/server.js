@@ -9,6 +9,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Debug middleware to log incoming requests
+app.use((req, res, next) => {
+  console.log('Incoming request:', req.method, req.url, req.path);
+  next();
+});
+
 // mount all routes
 routes(app);
 
