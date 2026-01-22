@@ -10,9 +10,9 @@ module.exports = {
       },
       fontFamily: { TenorSans:['Tenor Sans','sans-serif'], Rubik:['Rubik','sans-serif'] },
       backgroundImage: {
-        booking:"url('./Assets/Images/booking.jpg')",
-        doctor:"url('./Assets/Images/doctor.jpg')",
-        diary:"url('./Assets/Images/diary.jpg')"
+        booking:"url('/images/booking.jpg')",
+        doctor:"url('/images/doctor.jpg')",
+        diary:"url('/images/diary.jpg')"
       }
     }
   },
