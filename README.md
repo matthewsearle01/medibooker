@@ -1,6 +1,7 @@
 # MediBooker
 
-A medical appointment booking system.
+Medical appointment booking system built with React 18, Express 5, and MongoDB Atlas, deployed on Vercel with serverless functions.
+Features Tailwind CSS styling, RESTful API, and responsive design for seamless healthcare appointment scheduling.
 
 ## Tech Stack
 
