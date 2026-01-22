@@ -10,7 +10,7 @@ export function getAvailableTimes(appointments) {
     '16:00 - 17:00',
   ];
   let bookedTimes = [];
-  appointments.map((appointment) => {
+  appointments.forEach((appointment) => {
     bookedTimes.push(appointment.Time);
   });
 

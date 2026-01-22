@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SelectDoctor from '../../FormComponents/SelectDoctor';
 import SelectTime from '../../FormComponents/SelectTime';
@@ -23,7 +23,7 @@ const PatientBooking = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     returnInputState();
-    if (doctor == '' || date == '' || time == '') {
+    if (doctor === '' || date === '' || time === '') {
       setShowResults(true);
       console.log('Please fill in all the fields');
       navigate('/patient-booking');
@@ -43,7 +43,7 @@ const PatientBooking = (props) => {
 
   return (
     <div className='bg-blue-100 flex flex-col justify-between'>
-      <Navbar heading='Appointment booking' link={handleAppointmentClick} content='Cancel' style='ml-auto px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500' />
+      <Navbar heading='Appointment booking' link={handleAppointmentClick} content='Cancel' buttonClass='ml-auto px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500' />
       <section className='p-6 mx-6 md:mx-auto bg-white rounded-md shadow-md my-4'>
         <h1 className='text-blue-900 text-2xl'>To begin booking an appointment, complete the form below</h1>
         <form>

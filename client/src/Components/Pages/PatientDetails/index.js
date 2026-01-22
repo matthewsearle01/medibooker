@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from "../../GeneralComponents/Navbar";
 import Footer from "../../GeneralComponents/Footer";
@@ -7,7 +7,7 @@ const PatientDetails = (props) => {
   const navigate = useNavigate();
 
   async function addAppointment(input) {
-    let response = await fetch('http://localhost:3001/appointments', {
+    await fetch('/api/appointments', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -55,7 +55,7 @@ const PatientDetails = (props) => {
 
   return (
     <section className='bg-blue-100 flex flex-col justify-between h-full'>
-      <Navbar heading='Patient details' link={handleHomeButton} content='Cancel booking' style='ml-auto px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500'/>
+      <Navbar heading='Patient details' link={handleHomeButton} content='Cancel booking' buttonClass='ml-auto px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500'/>
         <section className='p-6 mx-6 md:mx-auto bg-white rounded-md shadow-md my-4'>
           <h1 className='text-blue-900 text-2xl'>
           Patient Details For Appointment With {props.input.Doctor} at{' '}
